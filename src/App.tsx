@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Main from "./views/Main/Main";
+import Mounth from "./views/Main/Main";
+import Header from "./shared/Header/Header";
+import Modal from "./shared/Modal/Modal";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <BrowserRouter>
+      {/* <Modal /> */}
+      <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="month" element={<Mounth />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

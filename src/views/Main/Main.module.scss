@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.mainScreen {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

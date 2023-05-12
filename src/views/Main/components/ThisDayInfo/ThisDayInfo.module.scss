@@ -1,0 +1,111 @@
+@import "../../../../styles/variables.scss";
+
+.thisDayInfo {
+  position: relative;
+  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+  font-size: 18px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  background: var(#{--components-bg-default});
+  overflow: hidden;
+  position: relative;;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 10;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.item svg {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 1px rgba(34, 69, 119, 0.8);
+  border-radius: 50%;
+}
+
+.item svg,
+.indicator__name {
+  margin-right: 20px;
+}
+
+.indicator__name {
+  color: $base-color;
+  width: 15%;
+  text-align: center;
+}
+
+.indicator__value {
+  color: var(#{--text-color-default});
+}
+
+.cloud1,
+.cloud2,
+.cloud3,
+.cloud4 {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+@-webkit-keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-moz-keyframes animCloud {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+@keyframes animCloud {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.cloud1 {
+  -webkit-animation: animCloud 40s infinite linear;
+  -moz-animation: animCloud 40s infinite linear;
+  animation: animCloud 40s infinite linear;
+}
+.cloud2 {
+  -webkit-animation: animCloud 60s infinite linear;
+  -moz-animation: animCloud 60s infinite linear;
+  animation: animCloud 60s infinite linear;
+}
+.cloud3 {
+  -webkit-animation: animCloud 80s infinite linear;
+  -moz-animation: animCloud 80s infinite linear;
+  animation: animCloud 80s infinite linear;
+}
+.cloud4 {
+  -webkit-animation: animCloud 100s infinite linear;
+  -moz-animation: animCloud 100s infinite linear;
+  animation: animCloud 100s infinite linear;
+}
