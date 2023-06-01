@@ -34,26 +34,32 @@ const Modal = ({}: Props) => {
     <>
       <div className={s.modal}>
         <div className={s.modal__content}>
+        <div className={s.close}>
+            <ImgSelector id="close" />
+          </div>
           <div className={s.day}>
-            <div className={s.temp}>20°</div>
-            <div className={s.name}>Среда</div>
-            <div className={s.img}>
-              <ImgSelector id="sun" />
+            <div className={s.day__block}>
+              <div>
+                <p className={s.temp}>20°</p>
+                <p className={s.name}>Среда</p>
+              </div>
+              <div className={s.img}>
+                <ImgSelector id="sun" />
+              </div>
             </div>
-            <div className={s.time}>
-              Время: <span>21:54</span>
-            </div>
-            <div className={s.city}>
-              Время: <span>Москва</span>
+            <div className={s.day__block}>
+              <p className={s.time}>
+                Время: <span>21:54</span>
+              </p>
+              <p className={s.city}>
+                Город: <span>Москва</span>
+              </p>
             </div>
           </div>
           <div className={s.thisDayInfo__items}>
             {items.map((item: Item) => (
               <ThisDayItem key={item.icon_id} item={item} />
             ))}
-          </div>
-          <div className={s.close}>
-            <ImgSelector id="close" />
           </div>
         </div>
       </div>

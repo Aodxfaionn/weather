@@ -2,23 +2,29 @@
 
 .thisDayInfo {
   position: relative;
-  padding: 40px;
-  max-width: 750px;
-  width: 100%;
-  font-size: 18px;
+  padding: 30px;
+  width: 60%;
+  min-width: 50px;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
   background: var(#{--components-bg-default});
   overflow: hidden;
-  position: relative;;
+}
+
+@media (max-width: 900px) {
+  .thisDayInfo {
+    width: 100%;
+  }
 }
 
 .item {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  gap: 15px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 10;
+  text-align: left;
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -35,15 +41,8 @@
   border-radius: 50%;
 }
 
-.item svg,
-.indicator__name {
-  margin-right: 20px;
-}
-
 .indicator__name {
   color: $base-color;
-  width: 15%;
-  text-align: center;
 }
 
 .indicator__value {
@@ -108,4 +107,10 @@
   -webkit-animation: animCloud 100s infinite linear;
   -moz-animation: animCloud 100s infinite linear;
   animation: animCloud 100s infinite linear;
+}
+
+@media (max-width: 800px) {
+  .thisDayInfo {
+    width: 100%;
+  }
 }

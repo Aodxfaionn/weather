@@ -17,8 +17,7 @@ const ThisDayItem = ({ item }: Props) => {
   return (
     <div className={s.item}>
       <IndicatorSelector id={icon_id} />
-      <p className={s.indicator__name}>{name}</p>
-      <p className={s.indicator__value}>{value}</p>
+      <p className={s.indicator__name}>{name}: <span className={s.indicator__value}>{value}</span></p>
     </div>
   );
 };

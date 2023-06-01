@@ -20,3 +20,11 @@
   color: $primary-color;
   text-shadow: 4px 3px 5px #fff, 9px 8px 0px rgb(0 0 0 / 15%);
 }
+
+.toggle {
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

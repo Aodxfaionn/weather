@@ -1,23 +1,22 @@
 $primary-color: #043272;
-$light-bg: #fff;
+$day-bg: rgba(255, 247, 230);
 $box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
 $border-radius: 20px;
 
-$light-color: #000;
-$dark-color: #fff;
+$day-color: #0f0f0f;
+$night-color: #cfc975;
 $base-color: #527edf;
 
 $body-bg-day: url(../assets/img/bg/day.jpg);
 $body-bg-night: url(../assets/img/bg/night.jpg);
 
-$components-bg-dark: #4f4f4f;
-$components-bg-light: rgba(255, 247, 230, 0.7);
+$components-bg-night: #4f4f4f;
+$components-bg-day: rgba(255, 247, 230, 0.7);
 
-$card-bg-light: rgba(71, 147, 255, 0.3);
-$card-bg-dark: #2e3035;
-
-$card-box-shadow-light: 0px 3px 20px rgba(147, 144, 144, 0.28);
-$card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
+$card-bg-day: rgb(127 158 201 / 30%);
+$card-bg-night: #2e3035;
+$card-box-shadow-day: 0px 1px 10px rgba(179, 178, 181, 0.2);
+$card-box-shadow-night: 0px 1px 10px rgba(179, 178, 181, 0.8);
 
 :root {
   //body-bg
@@ -26,22 +25,22 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
   --body-bg-default: var(#{--body-bg-day});
 
   //components-bg
-  --components-bg-dark: #{$components-bg-dark};
-  --components-bg-light: #{$components-bg-light};
-  --components-bg-default: var(#{--components-bg-light});
+  --components-bg-night: #{$components-bg-night};
+  --components-bg-day: #{$components-bg-day};
+  --components-bg-default: var(#{--components-bg-day});
 
   //card-bg
-  --card-bg-dark: #{$card-bg-dark};
-  --card-bg-light: #{$card-bg-light};
-  --card-bg-default: var(#{--card-bg-light});
+  --card-bg-night: #{$card-bg-night};
+  --card-bg-day: #{$card-bg-day};
+  --card-bg-default: var(#{--card-bg-day});
 
   //card-shadow
-  --card-shadow-dark: #{$card-box-shadow-dark};
-  --card-shadow-light: #{$card-box-shadow-light};
-  --card-shadow-default: var(#{--card-shadow-light});
+  --card-shadow-night: #{$card-box-shadow-night};
+  --card-shadow-day: #{$card-box-shadow-day};
+  --card-shadow-default: var(#{--card-shadow-day});
 
   //text
-  --text-color-dark: #{$dark-color};
-  --text-color-light: #{$light-color};
-  --text-color-default: var(#{--text-color-light});
+  --text-color-night: #{$night-color};
+  --text-color-day: #{$day-color};
+  --text-color-default: var(#{--text-color-day});
 }
