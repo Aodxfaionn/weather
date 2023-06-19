@@ -2,17 +2,18 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import s from "./ThisDay.module.scss";
 import ImgSelector from "../../../../assets/img/ImgSelector";
+import { Weather } from "../../../../store/types";
 
-// interface Props {
-//     weather: Weather;
-//   }
+interface Props {
+    weather: Weather;
+  }
 
-const ThisDayInfo = () => {
+const ThisDayInfo = ({ weather }: Props) => {
   return (
     <div className={s.thisDay}>
       <div className={s.thisDay__block}>
         <div>
-          <p className={s.temp}>20°</p>
+          <p className={s.temp}>{Math.floor(weather.main.temp)}°</p>
           <p className={s.name}>Среда</p>
         </div>
         <div className={s.img}>
